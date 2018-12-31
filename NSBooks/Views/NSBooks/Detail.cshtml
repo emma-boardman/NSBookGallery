@@ -1,34 +1,27 @@
 ﻿@{ 
 
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "NS Book Detail";
 }
 
 <!DOCTYPE html>
 
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-    <div>
-        <h1>@ViewBag.SeriesTitle</h1>
-        <h2>JLPT Level: #@ViewBag.JlptLevel</h2>
-        <h5>Description:</h5>
-        <div>@Html.Raw(ViewBag.Description)</div>
 
-        @if (ViewBag.Authors.Length > 0)
-        {
-            <h5>Authors:</h5>
-            <div>
-                <ul>
-                    @foreach (var author in ViewBag.Authors)
-                    {
-                        <li> @author </li>
-                    }
-                </ul>
-            </div>
-        }
+            <h1>@ViewBag.SeriesTitle</h1>
+            <h2>JLPT Level: #@ViewBag.JlptLevel</h2>
+            <h5>Description:</h5>
+            <div>@Html.Raw(ViewBag.Description)</div>
 
-    </div>
-</body>
-</html>
+            @if (ViewBag.Authors.Length > 0)
+            {
+                <h5>Authors:</h5>
+                <div>
+                    <ul>
+                        @foreach (var author in ViewBag.Authors)
+                        {
+                            <li> @author </li>
+                        }
+                    </ul>
+                </div>
+            }
+
