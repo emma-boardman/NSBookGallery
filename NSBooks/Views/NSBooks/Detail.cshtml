@@ -1,19 +1,6 @@
-﻿@{
-    /**/
+﻿@{ 
 
     Layout = null;
-    var seriesTitle = "Kanji Practice";
-    var jlptLevel = 4;
-    var description = "<b>Info Info Info</b>";
-    var authors = new string[]
-        {
-                "Script: Dan Slott",
-                "Pencils: Humberto Ramos",
-                "Inks: Victor Olazaba",
-                "Colors: Edgar Delgado",
-                "Letters: Chris Eliopoulos"
-        };
-
 }
 
 <!DOCTYPE html>
@@ -24,23 +11,23 @@
 </head>
 <body>
     <div>
-        <h1>@seriesTitle</h1>
-        <h2>JLPT Level: #@jlptLevel</h2>
+        <h1>@ViewBag.SeriesTitle</h1>
+        <h2>JLPT Level: #@ViewBag.JlptLevel</h2>
         <h5>Description:</h5>
-        <div>@Html.Raw(description)</div>
+        <div>@Html.Raw(ViewBag.Description)</div>
 
-        @if (authors.Length > 0)
-    {
-        <h5>Authors:</h5>
-        <div>
-            <ul>
-                @foreach (var author in authors)
-            {
-                <li> @author </li>
+        @if (ViewBag.Authors.Length > 0)
+        {
+            <h5>Authors:</h5>
+            <div>
+                <ul>
+                    @foreach (var author in ViewBag.Authors)
+                    {
+                        <li> @author </li>
+                    }
+                </ul>
+            </div>
         }
-            </ul>
-        </div>
-}
 
     </div>
 </body>
