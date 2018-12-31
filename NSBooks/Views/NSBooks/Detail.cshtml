@@ -1,16 +1,35 @@
 ﻿@{
+    /**/
+
     Layout = null;
+    var seriesTitle = "Kanji Practice";
+    var jlptLevel = 4;
+    var description = "<b>Info Info Info</b>";
+    var authors = new string[]
+        {
+                "Script: Dan Slott",
+                "Pencils: Humberto Ramos",
+                "Inks: Victor Olazaba",
+                "Colors: Edgar Delgado",
+                "Letters: Chris Eliopoulos"
+        };
+
 }
 
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title></title>
-    </head>
-    <body>
-        <div>
-            <h1>Hello from our view</h1>
-        </div>
-    </body>
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        <h1>@seriesTitle</h1>
+        <h2>JLPT Level: #@jlptLevel</h2>
+        <h5>Description:</h5>
+        <div>@Html.Raw(description)</div>
+        <h5>Authors:</h5>
+        <div>@authors</div>
+    </div>
+</body>
 </html>
