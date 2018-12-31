@@ -28,8 +28,20 @@
         <h2>JLPT Level: #@jlptLevel</h2>
         <h5>Description:</h5>
         <div>@Html.Raw(description)</div>
+
+        @if (authors.Length > 0)
+    {
         <h5>Authors:</h5>
-        <div>@authors</div>
+        <div>
+            <ul>
+                @foreach (var author in authors)
+            {
+                <li> @author </li>
+        }
+            </ul>
+        </div>
+}
+
     </div>
 </body>
 </html>
