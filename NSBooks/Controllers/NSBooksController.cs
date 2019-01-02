@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
+using NSBooks.Models;
 
 namespace NSBooks.Controllers
 {
@@ -9,21 +10,20 @@ namespace NSBooks.Controllers
         public ActionResult Detail()
 
         {
+            var nsBook = new NSBook()
 
-            ViewBag.SeriesTitle = "Kanji Practice";
-            ViewBag.JlptLevel = 4;
-            ViewBag.Description = "<b>Info Info Info</b>";
-            ViewBag.Authors = new string[]
-
+            {
+                SeriesTitle = "Kanji Practice",
+                JlptLevel = 4,
+                DescriptionHtml = "<b>Info Info Info</b>",
+                Authors = new Author[]
                 {
-                    "Script: Test this isn't a cached value",
-                    "Pencils: Humberto Ramos",
-                    "Inks: Victor Olazaba",
-                    "Colors: Edgar Delgado",
-                    "Letters: Chris Eliopoulos"
-                };
+                    new Author() { Name = "Writer 1", Role = "Writing 1"},
+                    new Author() { Name = "Writer 2", Role = "Writing 2"}
+                }
+            };
 
-            return View();
+            return View(nsBook);
         }
     }
 }
