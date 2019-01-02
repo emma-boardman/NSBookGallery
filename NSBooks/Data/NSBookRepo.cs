@@ -13,6 +13,7 @@ namespace NSBooks.Data
             {
                 SeriesTitle = "Kanji Practice",
                 JlptLevel = 4,
+                Id = 1,
                 DescriptionHtml = "<b>Info Info Info</b>",
                 Authors = new Author[]
               {
@@ -26,6 +27,7 @@ namespace NSBooks.Data
             {
                 SeriesTitle = "Human Rights in Japan",
                 JlptLevel = 1,
+                Id = 2,
                 DescriptionHtml = "<b>Info Info Info</b>",
                 Authors = new Author[]
               {
@@ -39,6 +41,7 @@ namespace NSBooks.Data
             {
                 SeriesTitle = "News Phrases",
                 JlptLevel = 1,
+                Id = 3,
                 DescriptionHtml = "<b>Info Info Info</b>",
                 Authors = new Author[]
               {

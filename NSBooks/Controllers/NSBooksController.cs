@@ -1,28 +1,30 @@
 ﻿using System;
 using System.Web.Mvc;
+using NSBooks.Data;
 using NSBooks.Models;
 
 namespace NSBooks.Controllers
 {
     public class NSBooksController : Controller
     {
-     
-        public ActionResult Detail()
+
+        private NSBookRepo _nsBookRepo = null;
+
+        public NSBooksController()
+        {
+            _nsBookRepo = new NSBookRepo();
+        }
+
+        public ActionResult Detail(int? id)
 
         {
-            var nsBook = new NSBook()
-
+            if (id == null)
             {
-                SeriesTitle = "Kanji Practice",
-                JlptLevel = 4,
-                DescriptionHtml = "<b>Info Info Info</b>",
-                Authors = new Author[]
-                {
-                    new Author() { Name = "Writer 1", Role = "Writing 1"},
-                    new Author() { Name = "Writer 2", Role = "Writing 2"}
-                }
-            };
+                return HttpNotFound();
+            }
+            var nsBook = _nsBookRepo.GetNSBook(id.Value);
 
+           
             return View(nsBook);
         }
     }

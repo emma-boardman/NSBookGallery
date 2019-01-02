@@ -42,24 +42,3 @@
 
 
 
-<!DOCTYPE html>
-
-
-<h1>@Model.SeriesTitle</h1>
-<h2>JLPT Level: #@Model.JlptLevel</h2>
-<h5>Description:</h5>
-<div>@Html.Raw(Model.DescriptionHtml)</div>
-
-@if (Model.Authors.Length > 0)
-{
-    <h5>Authors:</h5>
-    <div>
-        <ul>
-            @foreach (var author in Model.Authors)
-            {
-                <li> @author.Role: @author.Name </li>
-            }
-        </ul>
-    </div>
-}
-
