@@ -53,6 +53,10 @@ namespace NSBooks.Data
 
     };
 
+        public NSBook[] GetNSBooks()
+        {
+            return _nsBooks;
+        }
 
         public NSBook GetNSBook(int id)
         {

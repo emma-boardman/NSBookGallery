@@ -15,6 +15,15 @@ namespace NSBooks.Controllers
             _nsBookRepo = new NSBookRepo();
         }
 
+
+        public ActionResult Index()
+        {
+
+            var nsBooks = _nsBookRepo.GetNSBooks();
+            return View(nsBooks);
+
+        }
+
         public ActionResult Detail(int? id)
 
         {
