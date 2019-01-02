@@ -67,6 +67,7 @@
     <Folder Include="Models\" />
     <Folder Include="Scripts\" />
     <Folder Include="Views\NSBooks\" />
+    <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
@@ -98,6 +99,7 @@
     <Compile Include="Controllers\NSBooksController.cs" />
     <Compile Include="Models\NSBook.cs" />
     <Compile Include="Models\Author.cs" />
+    <Compile Include="Data\NSBookRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-1.10.2.min.map" />
