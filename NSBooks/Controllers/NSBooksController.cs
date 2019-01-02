@@ -16,12 +16,14 @@ namespace NSBooks.Controllers
         }
 
 
-        public ActionResult Index()
+        public ActionResult List()
+
         {
 
             var nsBooks = _nsBookRepo.GetNSBooks();
             return View(nsBooks);
 
+          
         }
 
         public ActionResult Detail(int? id)
@@ -36,5 +38,7 @@ namespace NSBooks.Controllers
            
             return View(nsBook);
         }
+
+       
     }
 }

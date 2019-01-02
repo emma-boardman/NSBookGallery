@@ -1,0 +1,21 @@
+﻿@model  NSBooks.Models.NSBook[]
+
+@{
+    Layout = null;
+}
+
+@{
+    ViewBag.Title = "Index";
+}
+
+    <div class="row">
+        @foreach (var book in Model)
+        {
+    <div class="col-md-3">
+        <h4>@book.SeriesTitle</h4>
+        <img src="/Images/the-amazing-spider-man-700.jpg"
+             alt="The Amazing Spider-Man #700"
+             class="img-responsive" />
+    </div>
+        }
+    </div>
